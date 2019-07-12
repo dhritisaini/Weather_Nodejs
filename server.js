@@ -5,12 +5,15 @@ const app = express()
 
 const apiKey = '7f868759057958b14d94e62263bfae99';
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
   res.render('index', {weather: null, error: null});
+app.listen(3000, function () {
+  console.log('App listening on port 3000')
 })
 
 app.post('/', function (req, res) {
