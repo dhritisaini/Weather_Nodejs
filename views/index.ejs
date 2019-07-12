@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Weather app</title>
+    <title>Weather Now</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   </head>
   <body>
-     <center><h1>WEATHER NOW: Get Real-time Weather at any location instantly</h1></center> 
+      <center><h1>WEATHER NOW: Get Real-time Weather at any location instantly</h1></center> 
     <div class="container">
       <fieldset>
         <form action="/" method="post">
@@ -15,11 +15,12 @@
           <input type="submit" class="ghost-button" value="Get Weather">
         </form>
         <% if(weather !== null){ %>
-            <p><%= weather %></p>
-          <% } %>
-          <% if(error !== null){ %>
-            <p><%= error %></p>
-          <% } %>
+          <p><%= weather %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
       </fieldset>
     </div>
   </body>
